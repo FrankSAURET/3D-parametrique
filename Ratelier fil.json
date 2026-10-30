@@ -1,0 +1,17 @@
+{
+  "parameterSets": {
+    "Support Frank": {
+      "Nombre_de_Supports": "20",
+      "Epaisseur_Plaque": "5",
+      "Largeur_support": "15",
+      "Epaisseur_Support": "5",
+      "Espace_Entre_Support": "8",
+      "Distance_1e_support_bord_plaque": "7.5",
+      "Hauteur_Plaque": "60",
+      "Hauteur_Support": "50",
+      "Longueur_Support": "60",
+      "Tolerance_Percage": "0"
+    }
+  },
+  "fileFormatVersion": "1"
+}
