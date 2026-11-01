@@ -1,3 +1,4 @@
 {
-    "workbench.colorTheme": "Colored Theme (China blue)"
+    "workbench.colorTheme": "Colored Theme (China blue)",
+    "openscad.enableLazyUnion": true
 }
