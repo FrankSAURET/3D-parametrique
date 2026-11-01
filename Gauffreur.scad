@@ -12,9 +12,9 @@ output_mode = "Impression ouverte"; // [Impression ouverte,Aperçu fermé,Aperç
 // Angle d'ouverture
 opening_angle = 45; // [0:5:180]
 // Couleur d'affichage seulement (nom CSS ou "#RRGGBB"). Sans effet sur l'impression.
-// Couleur de la demi-partie inférieure
+// Couleur de la partie inférieure
 lower_color = "LightSteelBlue";
-// Couleur de la demi-partie supérieure
+// Couleur de la partie supérieure
 upper_color = "SteelBlue";
 
 /* [02 Corps] */
@@ -83,7 +83,7 @@ text_offset_y = 0; // [-20:0.5:20]
 svg_file = "default.svg";
 // Désactivé : ignorer tous les SVG, y compris ceux importés précédemment.
 // Activer le SVG
-svg_enabled = true;
+svg_enabled = false;
 // Largeur du SVG
 svg_width = 26; // [3:0.5:75]
 // Hauteur du SVG
