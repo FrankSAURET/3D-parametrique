@@ -11,6 +11,11 @@ output_mode = "Impression ouverte"; // [Impression ouverte,Aperçu fermé,Aperç
 // Utilisé uniquement pour l'aperçu de l'ouverture. 0 = fermé, 180 = ouvert à plat.
 // Angle d'ouverture
 opening_angle = 45; // [0:5:180]
+// Couleur d'affichage seulement (nom CSS ou "#RRGGBB"). Sans effet sur l'impression.
+// Couleur de la demi-partie inférieure
+lower_color = "LightSteelBlue";
+// Couleur de la demi-partie supérieure
+upper_color = "SteelBlue";
 
 /* [02 Corps] */
 // Dimension de la charnière jusqu'au bord ouvert du papier, en mm.
@@ -387,11 +392,16 @@ module hinge_coupon() {
     }
 }
 
-if(output_mode=="Impression ouverte") { lower(); upper_open(); }
-else if(output_mode=="Demi-partie inférieure") lower();
-else if(output_mode=="Demi-partie supérieure") upper_open();
-else if(output_mode=="Test de charnière") hinge_coupon();
+// Couleur explicite dans tous les modes : sinon le visualiseur VS Code
+// remplace la couleur par défaut d'OpenSCAD par celle du texte du thème.
+if(output_mode=="Impression ouverte") {
+    color(lower_color) lower();
+    color(upper_color) upper_open();
+}
+else if(output_mode=="Demi-partie inférieure") color(lower_color) lower();
+else if(output_mode=="Demi-partie supérieure") color(upper_color) upper_open();
+else if(output_mode=="Test de charnière") color(lower_color) hinge_coupon();
 else if(output_mode=="Aperçu fermé" || output_mode=="Aperçu de l'ouverture") {
-    color("LightSteelBlue") lower();
-    color("SteelBlue") fold_from_open(output_mode=="Aperçu fermé"?0:opening_angle) upper_open();
+    color(lower_color) lower();
+    color(upper_color) fold_from_open(output_mode=="Aperçu fermé"?0:opening_angle) upper_open();
 }
