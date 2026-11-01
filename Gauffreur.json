@@ -1,0 +1,11 @@
+{
+  "parameterSets": {
+    "Patte de chat": {
+      "output_mode": "Impression ouverte",
+      "text_enabled": "false",
+      "svg_file": "Empreinte_chat.svg",
+      "svg_enabled": "true"
+    }
+  },
+  "fileFormatVersion": "1"
+}
